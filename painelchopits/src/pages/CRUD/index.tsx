@@ -3,17 +3,17 @@ import { number } from "json-decode";
 import { useCallback, useEffect, useRef, useState, type SyntheticEvent } from "react";
 import { data, useNavigate, useParams } from "react-router-dom";
 
-export default function Crud () {
-    const navigate =useNavigate();
+export default function Crud() {
+    const navigate = useNavigate();
     const { id } = useParams();
     const refForm = useRef<any>(null);
     const [isEditar, setIsEditar] = useState(false);
 
     useEffect(() => {
-        const idClient = number (id);
+        const idClient = number(id);
         console.log(idClient);
 
-        if(!isNaN(idClient)){
+        if (!isNaN(idClient)) {
             setIsEditar(true)
 
             axios.get(`http://localhost:3001/users?id=${idClient}`)
@@ -31,22 +31,32 @@ export default function Crud () {
     const submitForm = useCallback((event: SyntheticEvent) => {
         event.preventDefault();
 
-        if(refForm.current.checkValidity()) {
-            
+        if (refForm.current.checkValidity()) {
+
             const target = event.target as typeof event.target & {
                 nomeCompleto: { value: string },
-                cpf: {value: string },
-                dataNascimento: {value: },
-                email: {value: string},
-                telefone: {value: string},
-                logradouro: {value: string},
-                numero: {value: string},
-                complemento: {value: string},
-                bairro: {value: string},
-                cidade: {value: string},
-                estado: {value: string}
+                cpf: { value: string },
+                dataNascimento: { value: },
+                email: { value: string },
+                telefone: { value: string },
+                logradouro: { value: string },
+                numero: { value: string },
+                complemento: { value: string },
+                bairro: { value: string },
+                cidade: { value: string },
+                estado: { value: string }
+            }
+            let objSalvar = {
+                nomeCompleto: target.nomeCompleto.value,
+                cpf: target.cpf.value,
+                dataNascimento: target.dataNascimento.value,
+                email: target.email.value,
+                telefone: target.telefone.value,
+                
             }
         }
+
+
     })
 
 }

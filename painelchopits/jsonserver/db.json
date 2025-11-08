@@ -7,5 +7,35 @@
       "permissoes": "admin",
       "id": 10
     }
+  ],
+  "clients": [
+    {
+      "nomeCompleto": "Gabriel Henrique Friedrichsen",
+      "cpf": "113.448.949-84",
+      "dataNascimento": "2005-08-15",
+      "email": "henriquefriedrichsen81@gmail.com",
+      "telefone": "44984326454",
+      "logradouro": "AV Vitoria",
+      "numero": "5339",
+      "complemento": "sdasdadvasccvasdfgv",
+      "bairro": "vverde vale",
+      "cidade": "umuarama",
+      "estado": "AL",
+      "id": 2
+    },
+    {
+      "nomeCompleto": "Gabriel Henrique Friedrichsen",
+      "cpf": "11344894984",
+      "dataNascimento": "2005-12-20",
+      "email": "henriquefriedrichsen81@gmail.com",
+      "telefone": "44984326454",
+      "logradouro": "AV Vitoria",
+      "numero": "5339",
+      "complemento": "",
+      "bairro": "vverde vale",
+      "cidade": "umuarama",
+      "estado": "GO",
+      "id": 3
+    }
   ]
 }

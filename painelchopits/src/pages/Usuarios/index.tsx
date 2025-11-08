@@ -4,7 +4,7 @@ import { FaPen, FaTrash } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import { Loading } from '../../components/Loading';
 import { Toast } from '../../components/Toast';
-import { verificaTokenExpirado } from '../../service/token';
+//import { verificaTokenExpirado } from '../../service/token';
 
 interface IUsuarios {
     id: number;

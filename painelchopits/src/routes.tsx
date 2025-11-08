@@ -3,11 +3,12 @@ import {
     Routes,
     Route
 } from "react-router-dom"
-import { Home } from "./pages/Home"
+//import { Home } from "./pages/Home"
 import { Categorias } from "./pages/Categorias"
 import { Usuarios } from "./pages/Usuarios"
 import GerenciarUsuarios from "./pages/Usuarios/Gerenciar"
-import Crud from "./pages/CRUD/"
+import { Clients } from "./pages/Clients"
+import GerenciarClients from "./pages/Clients/Gerenciar"
 import Login from "./pages/Login"
 
 export const Rotas = () => {
@@ -16,27 +17,31 @@ export const Rotas = () => {
             <Routes>
                 <Route
                     path="/"
-                    element={<Login />}
+                    element={<Login/>}
                 />
                 <Route
                     path="/categorias/:id"
-                    element={<Categorias />}
+                    element={<Categorias/>}
                 />
                 <Route
                     path="/usuarios"
-                    element={<Usuarios />}
+                    element={<Usuarios/>}
                 />
                 <Route
                     path="/usuarios/:id"
-                    element={<GerenciarUsuarios />}
+                    element={<GerenciarUsuarios/>}
                 />
                 <Route
                     path="*"
                     element={<h1>404</h1>}
                 />
                 <Route
-                    path="/Crud"
-                    element={<Crud />}
+                    path="/clients"
+                    element={<Clients/>}
+                />
+                <Route
+                    path="/clients/:id"
+                    element={<GerenciarClients/>}
                 />
             </Routes>
         </BrowserRouter>
